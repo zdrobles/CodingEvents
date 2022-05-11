@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<partial name="/Views/Shared/_LinkListPartial.cshtml" />
+<h1>@ViewBag.title</h1>
+<form method="post" action="/events/edit">
+    <label>Event Name: <input name="name" type="text" /></label><br />
+    <label>Description: <textarea name="description"></textarea></label><br />
+    <input type="hidden" value="@ViewBag.eventToEdit.Id" name="eventId" />
+    <input type="submit" value="Edit Event" />
+</form>
